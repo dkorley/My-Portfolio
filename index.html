@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Korley - Data Scientist</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <h1 class="centered-title">
+                Daniel Korley <br>
+                <span class="data-scientist">Data Scientist</span>
+            </h1>
+            <div class="nav-links">
+                <a href="#about">About Me</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <a href="#skills">Skills</a>
+                <a href="resume.html" class="resume-btn">View Resume</a> <!-- Resume Button -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <section id="about">
+        <div class="container">
+            <div class="profile-content">
+                <!-- Profile Picture Placeholder -->
+                <div class="profile-picture">
+                    <img id="profile-img" src="" alt="Profile Image" class="profile-img" />
+                    <input type="file" id="file-input" class="file-input" accept="image/*" onchange="loadImage(event)" />
+                </div>
+                <!-- About Me Text -->
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>
+                        My name is Daniel Korley, and I am a dedicated Data Scientist with expertise in Python, R, SQL, and MATLAB. I am currently pursuing a Master of Science in Applied Mathematics at Texas Tech University, where I am also engaged in advanced research exploring the age-dependent polarization of political preferences in Russian society.
+                    </p>
+                    <p>
+                        My research leverages machine learning to analyze and interpret complex social and political phenomena, particularly how generational experiences shape responses to political shifts. One of my current projects, titled "Ministry of Happiness: Measuring the Age-Dependent Polarization of Political Preferences in a Russian Society Returning to Authoritarianism," employs innovative methodologies to assess public sentiment and state loyalty through indirect measures.
+                    </p>
+                    
+                    <p>
+                        I am deeply passionate about the transformative power of data science and its applications in shaping public policy and advancing societal understanding. My work reflects a commitment to utilizing data-driven approaches to uncover actionable insights and contribute to meaningful change.
+                    </p>
+
+                    <a href="certificates.html" class="btn">View My Certifications</a>
+                </div>
+            </div>
+        </div>
+    </section>    
+      
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <p>Details about your projects will go here.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <form id="contact-form" action="mailto:quayedaniel2@gmail.com" method="POST" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>                      
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li><strong>Technical Skills:</strong> Python, R, SQL, MATLAB</li>
+            <li><strong>Data Analysis & Visualization:</strong> Pandas, Numpy, Matplotlib and Seaborn, Plotly </li>
+            <li><strong>Machine Learning & AI:</strong> Scikit-learn, TensorFlow</li>
+            <li><strong>Data Wrangling & Cleaning:</strong> Excel and Regular Expression</li>
+            <li><strong>Soft Skills:</strong> Problem solving, communication, collaboration, time management, attention to detail</li>
+            <li><strong>Tools & Software:</strong> Jupyter Notebook, Git, Excel</li>
+        </ul>
+    </section>
+    
+
+    <!-- LinkedIn Link -->
+    <div class="linkedin-container">
+        <a href="https://www.linkedin.com/in/daniel-korley-1497b6142/" target="_blank" class="linkedin-link">LinkedIn</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Daniel Korley. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
