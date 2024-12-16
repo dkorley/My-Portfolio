@@ -1,406 +1,380 @@
-/* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
+
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333; /* Default text color */
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
-/* Navigation Bar */
-nav {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
 }
 
-nav .container {
+/* Navigation */
+.navbar {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.centered-title {
-    font-size: 5em; /* Slightly reduced size for balance */
-    font-weight: bold;
-    margin: 0;
+    padding: 1rem 2rem;
+    background-color: #003366;
     color: #fff;
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
-}
-
-.data-scientist {
-    font-size: .5em; /* Slightly larger size for better readability */
-    color: #fff;
-    display: block;
-    margin-top: 10px;
 }
 
 .nav-links {
-    margin-top: 20px;
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
 }
 
 .nav-links a {
-    color: white;
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.2em;
-    transition: color 0.3s ease;
+    color: #fff;
+    font-weight: 600;
 }
 
-.nav-links a:hover {
-    color: #007BFF;
-    text-decoration: underline; /* Underline effect on hover */
-}
-
-.resume-btn {
-    background-color: #007BFF;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 6px;
-    cursor: pointer;
+/* Styling for LinkedIn Button */
+.linkedin-btn {
+    background-color: #0077b5; /* LinkedIn blue */
+    color: #fff;
+    padding: 0.8rem 1.5rem;
     text-decoration: none;
-    font-size: 1.1em;
-    transition: background-color 0.3s ease;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
 }
 
-.resume-btn:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px); /* Slight lift on hover */
+.linkedin-btn:hover {
+    transform: scale(1.1);
+    background-color: #005c8e; /* Darker blue for hover effect */
 }
 
-/* Profile Section */
-#about {
-    padding: 80px 0;
-    background-color: #fff;
+
+/* Hero Section with Background Image */
+.hero {
+    background: url('images/profile.jpg') no-repeat center top/cover;
+    color: #fff;
+    padding: 4rem 2rem;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Light shadow for separation */
-}
-
-#about h2 {
-    font-size: 2.8em;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.profile-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    text-align: left;
-}
-
-.profile-picture {
     position: relative;
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    background-color: #ccc;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    height: 100vh;
 }
 
-.profile-img {
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block; /* Ensure the image is visible */
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
-.file-input {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    opacity: 0;
-    cursor: pointer;
+.hero-content {
+    position: relative;
+    z-index: 2;
 }
 
-/* About Me Text */
-.about-text {
-    max-width: 1100px;
-    text-align: left;
-}
-
-.about-text h3 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
-    font-weight: bold;
+.hero .btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #ffd700;
     color: #333;
-}
-
-.about-text p {
-    font-size: 1.1em;
-    margin-bottom: 15px;
-}
-
-/* Contact Form */
-#contact {
-    padding: 80px 0;
-    background-color: #fff;
-    text-align: center;
-}
-
-#contact h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-form {
-    max-width: 400px;
-    margin: 0 auto;
-    text-align: left;
-    background-color: #f9f9f9;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    transition: border 0.3s ease;
-}
-
-form input:focus, form textarea:focus {
-    border-color: #007BFF; /* Blue border on focus */
-    outline: none;
-}
-
-form .submit-btn {
-    background-color: #007BFF;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 6px;
-    cursor: pointer;
-    border: none;
-    font-size: 1.1em;
-    transition: background-color 0.3s ease;
-}
-
-form .submit-btn:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px); /* Lift effect on hover */
-}
-
-/* LinkedIn Link */
-.linkedin-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.linkedin-link {
-    font-size: 1.2em;
-    color: #0077b5;
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    z-index: 3;
 }
 
-.linkedin-link:hover {
-    color: #0056b3;
-    text-decoration: underline;
+.hero .btn:hover {
+    transform: scale(1.1);
+}
+
+/* Floating Text at Middle Right */
+.floating-text {
+    position: absolute;
+    top: 40%; /* Move the text closer to the middle */
+    right: 20px;  /* Distance from the right of the page */
+    z-index: 10;
+    color: #fff;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align text to the right */
+}
+
+.floating-text .large-name {
+    font-size: 8rem; /* Very large text */
+    margin: 0;
+    font-weight: bold;
+}
+
+.floating-text .subtext {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 10px; /* Add space between name and subtext */
+}
+
+
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Hover Effects */
+.hover-animate:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.1);
 }
 
 /* Footer */
 footer {
+    background-color: #003366;
+    color: #fff;
     text-align: center;
-    padding: 20px 0;
-    background-color: #333;
-    color: white;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for footer */
+    padding: 1rem 0;
 }
 
-footer p {
-    margin: 0;
-}
-
-/* Section Styling */
-section {
-    padding: 60px 0;
+/* About Section (Homepage) */
+.about {
+    padding: 50px 0;
     background-color: #fff;
     text-align: center;
 }
 
-section h2 {
-    font-size: 2.5em;
+.about h2 {
+    font-size: 2em;
     margin-bottom: 20px;
 }
 
-/* Projects Section */
-#projects {
-    padding: 80px 0;
+/* Skills Section */
+.skills {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.skills ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skills li {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.skills li:hover {
+    transform: scale(1.1);
+}
+
+/* Certifications Section */
+.certifications {
+    background-color: #f9f9f9;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.certifications-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.certification-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.certification-card:hover {
+    transform: translateY(-5px);
+}
+
+.certification-card i {
+    font-size: 3rem;
+    color: #00509e;
+    margin-bottom: 1rem;
+}
+
+.certification-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.certification-card p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+.btn-view {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #00509e;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-view:hover {
+    background-color: #003366;
+}
+
+/* Certificates Page */
+.certificates-page {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.certificate-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.certificate-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    max-width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.certificate-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.certificate-item:hover {
+    transform: scale(1.05);
+}
+
+.certificate-item p {
+    margin-top: 0.5rem;
+    font-weight: 600;
+    color: #00509e;
+}
+
+/* PDF Button */
+.btn-pdf {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #00509e;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-pdf:hover {
+    background-color: #003366;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 0;
     background-color: #fff;
     text-align: center;
 }
 
+.contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.contact .btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.contact .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Projects Section */
+.projects {
+    padding: 50px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatically adjusts based on screen size */
-    gap: 20px; /* Adjusted gap between the projects */
-    margin-top: 30px;
-    justify-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 .project-card {
-    background-color: #f9f9f9;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
     text-align: center;
-    width: 100%;
-    max-width: 500px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .project-card img {
     width: 100%;
     height: auto;
-    border-radius: 12px;
+    border-radius: 8px;
 }
 
 .project-card h3 {
-    margin-top: 20px;
-    font-size: 2rem;
-    font-weight: bold;
+    margin-top: 15px;
 }
-
-.project-card p {
-    font-size: 1.2rem;
-    color: #555;
-    margin: 15px 0;
-}
-
-.project-link {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.project-link:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
-}
-/* Projects Section */
-#projects {
-    padding: 80px 0;
-    background-color: #fff;
-    text-align: center;
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 projects per row */
-    gap: 5px; /* Further reduced gap between the projects */
-    margin-top: 30px;
-    justify-items: center;
-}
-
-.project-card {
-    background-color: #f9f9f9;
-    padding: 20px; /* Reduced padding inside the card */
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 100%;
-    max-width: 500px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.project-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-}
-
-.project-card h3 {
-    margin-top: 20px;
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.project-card p {
-    font-size: 1.2rem;
-    color: #555;
-    margin: 15px 0;
-}
-
-.project-link {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.project-link:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
-}
-
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .project-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-#skills ul {
-    list-style-type: none; /* Removes bullet points */
-    padding: 0;
-}
-
-#skills li {
-    font-size: 1.2rem;
-    margin: 10px 0;
-}
-

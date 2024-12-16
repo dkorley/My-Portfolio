@@ -3,94 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certificates - Daniel Korley</title>
+    <meta name="description" content="Daniel Korley's Certificates">
+    <title>Certificates | Daniel Korley</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="container">
-            <a href="index.html" class="btn">Back to Home</a>
-        </div>
-    </nav>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Daniel Korley</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- Certificates Section -->
-    <section id="certificates">
+    <section class="certificates-page">
         <div class="container">
-            <h1>My Certifications</h1>
-            <div class="certificates-grid">
-                <!-- Example Certificate -->
+            <h2>My Certificates</h2>
+            <div class="certificate-gallery">
+                <!-- Certificate 1 -->
                 <div class="certificate-item">
-                    <a href="certificates/Coursera.pdf" target="_blank">
-                        <img src="certificates/Coursera.jpg" alt="Coursera Certificate" class="certificate-thumbnail">
-                    </a>
+                    <img src="images/Coursera.jpg" alt="Certified Data Scientist">
                     <p>Certified Data Scientist - Coursera</p>
+                    <a href="certificates/Coursera.pdf" target="_blank" class="btn-pdf">View PDF</a>
                 </div>
-
+                <!-- Certificate 2 -->
                 <div class="certificate-item">
-                    <a href="certificates/Bootcamp.pdf" target="_blank">
-                        <img src="certificates/Bootcamp.jpg" alt="Bootcamp Certificate" class="certificate-thumbnail">
-                    </a>
-                    <p>Data Science Bootcamp - Bootcamp Institute</p>
+                    <img src="images/Bootcamp.jpg" alt="Machine Learning Bootcamp">
+                    <p>Machine Learning Bootcamp</p>
+                    <a href="certificates/Bootcamp.pdf" target="_blank" class="btn-pdf">View PDF</a>
                 </div>
-                <!-- Add more certificates as needed -->
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Daniel Korley. All rights reserved.</p>
+        <p>&copy; 2024 Daniel Korley. All Rights Reserved.</p>
     </footer>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        h1 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .certificates-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-
-        .certificate-item {
-            text-align: center;
-        }
-
-        .certificate-thumbnail {
-            width: 100%;
-            height: auto;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            transition: transform 0.3s ease;
-        }
-
-        .certificate-thumbnail:hover {
-            transform: scale(1.05);
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background: #f4f4f4;
-            margin-top: 20px;
-        }
-    </style>
-
 </body>
 </html>

@@ -3,143 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel Korley - Data Scientist</title>
+    <meta name="description" content="Daniel Korley - Data Scientist Portfolio">
+    <meta name="keywords" content="Data Science, Machine Learning, Python, R, SQL, Portfolio">
+    <title>Daniel Korley | Data Scientist</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Daniel Korley</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <!-- LinkedIn Link -->
+                <li><a href="https://www.linkedin.com/in/daniel-korley-1497b6142/" target="_blank" class="linkedin-btn">LinkedIn</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="container">
-            <h1 class="centered-title">
-                Daniel Korley <br>
-                <span class="data-scientist">Data Scientist</span>
-            </h1>
-            <div class="nav-links">
-                <a href="#about">About Me</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-                <a href="#skills">Skills</a>
-                <a href="resume.html" class="resume-btn">View Resume</a> <!-- Resume Button -->
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <a href="#projects" class="btn">View My Work</a>
+                <a href="resume.pdf" class="btn">View My Resume</a>
             </div>
         </div>
-    </nav>
+    </section>
 
-    <!-- Profile Section -->
-    <section id="about">
+    <!-- The large name and subtext -->
+    <div class="floating-text">
+        <h1 class="large-name">Daniel Korley</h1>
+        <p class="subtext">A passionate Data Scientist with expertise in Python,</p>
+        <p class="subtext">Machine Learning, and Data Visualization.</p>
+    </div>
+
+
+
+    <!-- About Section (Homepage) -->
+    <section id="about" class="about">
         <div class="container">
-            <div class="profile-content">
-                <!-- Profile Picture -->
-                <div class="profile-picture">
-                    <!-- Directly add your profile image here -->
-                    <img id="profile-img" src="images/profile.JPG" alt="Profile Image" class="profile-img" />
-                </div>
-                <!-- About Me Text -->
-                <div class="about-text">
-                    <h2>About Me</h2>
-                    <p>
-                        My name is Daniel Korley, and I am a dedicated Data Scientist with expertise in Python, R, SQL, and MATLAB. 
-                        I am currently pursuing a Master of Science in Applied Mathematics at Texas Tech University, where I am also engaged 
-                        in advanced research exploring the age-dependent polarization of political preferences in Russian society.
-                    </p>
-                    <p>
-                        My research leverages machine learning to analyze and interpret complex social and political phenomena, 
-                        particularly how generational experiences shape responses to political shifts. One of my current projects, 
-                        titled "Ministry of Happiness: Measuring the Age-Dependent Polarization of Political Preferences in a 
-                        Russian Society Returning to Authoritarianism," employs innovative methodologies to assess public sentiment and state 
-                        loyalty through indirect measures.
-                    </p>
-                    <p>
-                        I am deeply passionate about the transformative power of data science and its applications in shaping public policy and advancing societal understanding. My work reflects a commitment to utilizing data-driven approaches to uncover actionable insights and contribute to meaningful change.
-                    </p>
-
-                    <a href="certificates.html" class="btn">View My Certifications</a>
-                </div>
-            </div>
+            <h2>About Me</h2>
+            <p>
+                I am a data scientist with a strong background in machine learning, data analysis, and visualization. My research on political polarization and loyalty indexes has provided actionable insights into societal trends.
+            </p>
         </div>
-    </section>    
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul>
+                <li>Python</li>
+                <li>R</li>
+                <li>SQL</li>
+                <li>Machine Learning (scikit-learn, TensorFlow)</li>
+                <li>Data Visualization</li>
+                <li>Data Wrangling & Cleaning</li>
+                <li>Jupyter Notebook</li>
+                <li>Excel</li>
+            </ul>
+        </div>
+    </section>
 
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" class="projects">
         <div class="container">
             <h2>Projects</h2>
             <div class="project-grid">
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <img src="images/stock.png" alt="Project 1" class="project-image">
-                    <h3>Stock Market Trends Analysis with Interactive Visualization</h3>
-                    <p>This project utilizes Python, Dash, and Plotly to create an interactive data visualization platform that analyzes real-time stock market trends. 
-                        The platform includes a dynamic candlestick chart that displays detailed price movements over time, alongside key stock market data. 
-                        Users can explore and analyze the price fluctuations, trends, and patterns of various stocks, providing valuable insights for investors and 
-                        analysts. The visualization also incorporates historical data, allowing users to assess long-term trends and market behavior. 
-                        By integrating real-time data feeds, the platform enables a comprehensive view of the stock market's performance, 
-                        enhancing decision-making and strategy development.</p>
-                    <a href="https://github.com/dkorley/Interactive-Dashboards" target="_blank" class="project-link">View on GitHub</a>
+                <div class="project-card hover-animate">
+                    <img src="images/calculator.png" alt="Project 1" loading="lazy">
+                    <!--<h3>Ministry of Happiness</h3>-->
+                    <p>Functional Calculator Application</p>
                 </div>
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <img src="images/calculator.png" alt="Project 2" class="project-image">
-                    <h3>Functional Calculator Application with CustomTkinter</h3>
-                    <p>This project involves the creation of a fully functional calculator application using Python's CustomTkinter library. 
-                        The application features a user-friendly graphical interface with buttons for basic arithmetic operations, including 
-                        addition, subtraction, multiplication, and division. It also supports advanced functionalities like decimal input and 
-                        error handling for invalid operations. The layout is designed to be intuitive and responsive, providing users with a smooth 
-                        and interactive experience. This calculator application demonstrates proficiency in GUI development with 
-                        Python and showcases the ability to design interactive software for everyday tasks.</p>
-                    <a href="https://github.com/dkorley/Calculator-Application" target="_blank" class="project-link">View on GitHub</a>
+                <div class="project-card hover-animate">
+                    <img src="images/stock.png" alt="Project 2" loading="lazy">
+                    <h3>Interactive Visualization</h3>
+                    <p>Stock market trends</p>
                 </div>
-                <!-- Add more projects here -->
             </div>
         </div>
     </section>
-    
-    
-    
 
-    <!-- Contact Section -->
-    <section id="contact">
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
         <div class="container">
-            <h2>Contact</h2>
-            <form id="contact-form" action="mailto:quayedaniel2@gmail.com" method="POST" enctype="text/plain">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-            
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-            
-                <button type="submit" class="submit-btn">Submit</button>
-            </form>                       
+            <h2>Certifications</h2>
+            <div class="certifications-list">
+                <div class="certification-card">
+                    <i class="fas fa-certificate"></i>
+                    <h3>IBM Data Science</h3>
+                    <p>Coursera</p>
+                    <a href="certificates.html" class="btn-view">View Certificate</a>
+                </div>
+                <div class="certification-card">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Data Science Bootcamp</h3>
+                    <p>Bootcamp Program</p>
+                    <a href="certificates.html" class="btn-view">View Certificate</a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li><strong>Technical Skills:</strong> Python, R, SQL, MATLAB</li>
-            <li><strong>Data Analysis & Visualization:</strong> Pandas, Numpy, Matplotlib and Seaborn, Plotly </li>
-            <li><strong>Machine Learning & AI:</strong> Scikit-learn, TensorFlow</li>
-            <li><strong>Data Wrangling & Cleaning:</strong> Excel and Regular Expression</li>
-            <li><strong>Soft Skills:</strong> Problem solving, communication, collaboration, time management, attention to detail</li>
-            <li><strong>Tools & Software:</strong> Jupyter Notebook, Git, Excel</li>
-        </ul>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out to me via email:</p>
+            <a href="mailto:quayedaniel2@gmail.com" class="btn hover-scale">Email Me</a>
+        </div>
     </section>
-    
-
-    <!-- LinkedIn Link -->
-    <div class="linkedin-container">
-        <a href="https://www.linkedin.com/in/daniel-korley-1497b6142/" target="_blank" class="linkedin-link">LinkedIn</a>
-    </div>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Daniel Korley. All rights reserved.</p>
+        <p>&copy; 2024 Daniel Korley. All Rights Reserved.</p>
     </footer>
-
-    <script src="scripts.js"></script>
 </body>
 </html>
-
-
