@@ -31,6 +31,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
+            <p class="profession">Data Scientist | Data Analyst | ML Engineer</p>
             <div class="hero-text">
                 <a href="#projects" class="btn">View My Work</a>
                 <a href="resume-file.pdf" class="btn">View My Resume</a>
@@ -41,21 +42,9 @@
     <!-- The large name and subtext -->
     <div class="floating-text">
         <h1 class="large-name">Daniel Korley</h1>
-        <p class="subtext">A passionate Data Scientist with expertise in Python,</p>
+        <p class="subtext">A passionate Data Scientist with expertise in Python, SQL, R, MATLAB,</p>
         <p class="subtext">Machine Learning, and Data Visualization.</p>
     </div>
-
-
-
-    <!-- About Section (Homepage) -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>
-                I am a data scientist with a strong background in machine learning, data analysis, and visualization. My research on political polarization and loyalty indexes has provided actionable insights into societal trends.
-            </p>
-        </div>
-    </section>
 
     <!-- Skills Section -->
     <section id="skills" class="skills">
@@ -65,11 +54,10 @@
                 <li>Python</li>
                 <li>R</li>
                 <li>SQL</li>
+                <li>Matlab</li>
                 <li>Machine Learning (scikit-learn, TensorFlow)</li>
                 <li>Data Visualization</li>
                 <li>Data Wrangling & Cleaning</li>
-                <li>Jupyter Notebook</li>
-                <li>Excel</li>
             </ul>
         </div>
     </section>
@@ -123,10 +111,46 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2>Contact Me</h2>
-            <p>Feel free to reach out to me via email:</p>
-            <a href="mailto:quayedaniel2@gmail.com" class="btn hover-scale">Email Me</a>
+            <form action="https://formspree.io/f/meoqbayg" method="POST" class="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+
+                <button type="submit" class="btn hover-scale">Send Message</button>
+            </form>
         </div>
     </section>
+
+    <!-- About Section (Homepage) -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>
+                I am Daniel Korley, a passionate and results-driven Data Scientist with a strong foundation in Machine Learning, Data Analysis, and Visualization. 
+                With expertise in Python, R, SQL, and MATLAB, I specialize in transforming complex datasets into actionable insights that drive informed 
+                decision-making.
+            </p>
+            <p>
+                My professional journey is built on a combination of technical proficiency and a keen analytical mindset. I have a proven track record of 
+                leveraging cutting-edge tools such as Scikit-learn, TensorFlow, and Jupyter Notebook to develop predictive models, optimize processes, and 
+                uncover trends that solve real-world challenges.
+            </p>
+            <p>
+                I thrive in collaborative environments where innovation meets problem-solving. My recent research explored the intersection of 
+                political preferences and societal trends, employing advanced machine learning techniques to uncover patterns in public sentiment. 
+                This work not only deepened my technical expertise but also honed my ability to communicate complex findings effectively.
+            </p>
+            <p>
+                I am committed to delivering impactful results with precision and creativity.
+            </p>
+        </div>
+    </section>
+
 
     <!-- Footer -->
     <footer>

@@ -53,6 +53,16 @@ body {
 
 
 /* Hero Section with Background Image */
+/* Hero Section Profession Text */
+.hero .profession {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    z-index: 3;
+}
+
+
 .hero {
     background: url('/images/profile.jpg') no-repeat center top/cover;
     color: #fff;
@@ -150,17 +160,40 @@ footer {
     padding: 1rem 0;
 }
 
-/* About Section (Homepage) */
+/* About Section */
 .about {
-    padding: 50px 0;
-    background-color: #fff;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
     text-align: center;
 }
 
 .about h2 {
-    font-size: 2em;
+    font-size: 2.5em;
     margin-bottom: 20px;
+    color: #333;
+    font-weight: 600;
 }
+
+.about p {
+    text-align: justify;
+    line-height: 1.8;
+    font-size: 1.1em;
+    color: #555;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+.about strong {
+    color: #333;
+    font-weight: 600;
+}
+
+.about .container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+
 
 /* Skills Section */
 .skills {
@@ -313,11 +346,11 @@ footer {
     background-color: #003366;
 }
 
-/* Contact Section */
+/* Contact Section Styling */
 .contact {
     padding: 50px 0;
-    background-color: #fff;
     text-align: center;
+    background-color: #f4f4f4;
 }
 
 .contact h2 {
@@ -325,22 +358,46 @@ footer {
     margin-bottom: 20px;
 }
 
-.contact p {
-    font-size: 1.2em;
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
     margin-bottom: 20px;
-}
-
-.contact .btn {
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
+    border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 1rem;
 }
 
-.contact .btn:hover {
-    background-color: #0056b3;
+.contact-form button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #ffd700;
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
+
+.contact-form button:hover {
+    transform: scale(1.1);
+}
+
 
 /* Projects Section */
 .projects {
