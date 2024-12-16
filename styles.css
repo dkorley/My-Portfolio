@@ -54,7 +54,7 @@ body {
 
 /* Hero Section with Background Image */
 .hero {
-    background: url('images/profile.jpg') no-repeat center top/cover;
+    background: url('/images/profile.jpg') no-repeat center top/cover;
     color: #fff;
     padding: 4rem 2rem;
     text-align: center;
